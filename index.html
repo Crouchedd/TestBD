@@ -25,6 +25,7 @@
                 font-size: 5vh; /* Smaller than h2 but still large enough to be readable */
                 color: #ccc; /* Lighter color for subtlety */
                 margin-top: 20px; /* Space from the element above */
+                display: none; /* Initially hidden */
             }
             .img-container {
                 width: 100%; /* Full width of the container */
@@ -56,6 +57,7 @@
                 <span class="yell">B</span><span class="pink">i</span><span class="blue">r</span><span class="turq">t</span><span class="yell">h</span><span class="pink">d</span><span class="blue">a</span><span class="turq">y</span><span class="yell">?</span>
             </h1>
             <h2 id="answer"><blink>NO</blink></h2>
+            <h3 id="birthday-message">Happy birthday! Have a great day as wonderful as you are.</h3>
             <div class="img-container">
                 <img id="candles" src="unlit-candles.png" />
             </div>
@@ -68,6 +70,7 @@
                 if (day === 24 && month === 5) {
                     document.getElementById('answer').innerHTML = 'YES';
                     document.getElementById('candles').src = 'lit-candles.png';
+                    document.getElementById('birthday-message').style.display = 'block'; // Show the message
                 }
             };
         </script>
